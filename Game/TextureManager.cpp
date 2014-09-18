@@ -11,12 +11,12 @@ CTextureManager::CTextureManager(void)
 
 CTextureManager::~CTextureManager(void)
 {
-	//for(int i = 0; i<v_TextureInfo.size(); i++)
-	//{
-	//	v_TextureInfo[i].texture->m_pTexture->Release();
-	//}
+	for(int i = 0; i<v_TextureInfo.size(); i++)
+	{
+		v_TextureInfo[i].texture->m_pTexture->Release();
+	}
 
-	//v_TextureInfo.clear();
+	v_TextureInfo.clear();
 }
 
 CTexture2D * CTextureManager::LoadTexture(const char * path)
